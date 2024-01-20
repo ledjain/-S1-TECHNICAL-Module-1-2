@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+          font-family: 'Times New Roman', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+        }
+
+        .container {
+          border-radius: 3%;
+          max-width:800px;
+          margin: 20px auto;
+          background-color: #fff;
+          padding: 30px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        header {
+          text-align: left;
+          margin-bottom: 50px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+        header img {
+          max-width: 150px;
+          margin-top: 20px;
+          margin-right: 20px;
+        }
+    
+        .info {
+          margin-top: 20px;
+        }
+    
+        h1, h3 {
+          margin-top: 20px;
+          margin-bottom: 15px;
+        }
+    
+        .objective, .academic, .skills {
+          margin-bottom: 50px;
+        }
+        
+        .skills li{
+          margin: 20px;
+        }
+
+        .button{
+          margin-top: 20px;
+        }
+
+        .btn{
+          margin-top: 20px;
+          margin-left: 20px;
+          padding: 20px;
+          background-color: #f4f4f4;
+          cursor: pointer;
+          border-color: #f4f4f4;
+          border-radius: 10px;
+          box-shadow: 6px 6px 0px #000;
+        }
+
+        .btn:active{
+          transform:translateY(6px);
+          box-shadow: 0px 0px 0px #000;
+          transition: 0.2s ease;
+        }
+
+      </style>
+</head>
+
+<body>
+
+    <div class = "button">
+      <button class="btn" onclick="changeColor()">Change Color</button>
+    </div>
+
+    <div class="container" id="resumeContainer">
+
+        <header>  
+          
+          <div class="info">
+            <h1>JAIN, KHALED A.</h1>
+            <p>Address: Mandaluyong City, Philippines</p>
+            <p>Contact No.: 09123456789</p>
+            <p>Email: khaledjain@gmail.com</p>
+          </div>
+            <img src="profile-picture.jpeg" alt="Profile Picture">
+        </header>
+    
+        <section class="objective">
+          <h3>OBJECTIVE</h3>
+          <p>As a dedicated IT student with a strong foundation in programming languages and a keen interest in emerging technologies, I am seeking a challenging internship position where I can leverage my technical skills and passion for innovation. Eager to contribute to a dynamic team, I aim to apply my proficiency in coding, problem-solving, and collaborative communication to tackle real-world challenges in the IT industry. Through this internship, I aspire to gain valuable hands-on experience, further develop my technical expertise, and contribute positively to the advancement of cutting-edge projects within a forward-thinking organization. </p>
+        </section>
+    
+        <section class="academic">
+          <h3>ACADEMIC BACKGROUND</h3><br>
+          <p>Primary    : International Philippine School in Riyadh</p><br>
+          <p>Secondary  : A.G Villaroya Technological Foundation Inc.</p><br>
+          <p>Tertiary   : FEU Institute of Technology </p><br>
+        </section>
+    
+        <section class="skills">
+          <h3>SKILLS</h3>
+          <ul>
+            <li>C++ and Java Programming</li>
+            <li>Web Development with HTML/CSS</li>
+            <li>Database Management</li>
+            <li>Graphic Design</li>
+          </ul>
+        </section>
+      </div>
+
+      <script>
+        function changeColor() {
+          const body = document.body;
+
+          // Generate random RGB values for background color
+          const randomColor = () => Math.floor(Math.random() * 256);
+          const bgColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+
+          // Generate random RGB values for text color, ensuring it is readable
+          const textColor = `rgb(${255-randomColor()}, ${255-randomColor()}, ${255-randomColor()})`;
+
+          body.style.backgroundColor = bgColor;
+          body.style.color = textColor;
+        }
+      </script>
+
+</body>
+</html>
